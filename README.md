@@ -48,14 +48,23 @@ project-root/
 │   ├── setup.sh
 │   └── validate-env.js
 │
+├── .husky/               # Git hooks (Husky)
+│   ├── pre-commit
+│   ├── commit-msg
+│   └── pre-push
+│
 ├── src/                  # Source code
 ├── tests/                # Test files
 │
+├── .cursorrules          # Cursor AI coding guidelines
 ├── .editorconfig         # Editor configuration
 ├── .env.example          # Environment variables template
 ├── .gitattributes        # Git attributes for line endings
 ├── .gitignore           # Git ignore rules
+├── .lintstagedrc.js     # Lint-staged configuration
+├── commitlint.config.js # Commitlint configuration
 ├── eslint.config.js     # ESLint configuration
+├── package.json         # Node.js dependencies and scripts
 ├── prettier.config.js   # Prettier configuration
 ├── CONTRIBUTING.md       # Contribution guidelines
 ├── LICENSE               # License file
@@ -70,6 +79,10 @@ project-root/
 - **`.env.example`**: Template for environment variables
 - **`prettier.config.js`**: Code formatting configuration
 - **`eslint.config.js`**: Linting rules and configuration
+- **`.lintstagedrc.js`**: Configuration for lint-staged (runs on pre-commit)
+- **`commitlint.config.js`**: Commit message validation rules
+- **`.husky/`**: Git hooks for automated code quality checks
+- **`.cursorrules`**: Cursor AI coding guidelines and best practices
 - **`.vscode/`**: VS Code workspace settings for team consistency
 - **`.github/`**: Templates for issues and pull requests
 
@@ -116,6 +129,69 @@ This project follows a Git Flow branching model:
    git push origin release/v1.0.0
    # Create PR to main
    ```
+
+## 🔧 Git Hooks (Husky)
+
+This project uses [Husky](https://typicode.github.io/husky/) to enforce code quality through git hooks:
+
+- **Pre-commit**: Automatically formats and lints staged files using Prettier and ESLint
+- **Commit-msg**: Validates commit messages follow [Conventional Commits](https://www.conventionalcommits.org/) format
+- **Pre-push**: Runs tests and build validation before pushing to remote
+
+### Commit Message Format
+
+Commit messages must follow the conventional commits format:
+
+```
+<type>(<scope>): <subject>
+
+[optional body]
+
+[optional footer]
+```
+
+**Types:**
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, etc.)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding or updating tests
+- `build`: Build system or external dependencies
+- `ci`: CI configuration changes
+- `chore`: Other changes that don't modify src or test files
+- `revert`: Revert a previous commit
+
+**Examples:**
+```bash
+feat(auth): add user login functionality
+fix(api): resolve timeout issue in request handler
+docs(readme): update installation instructions
+```
+
+### Bypassing Hooks (Emergency Only)
+
+In rare cases, you can bypass hooks using the `--no-verify` flag:
+
+```bash
+git commit --no-verify -m "emergency fix"
+git push --no-verify
+```
+
+⚠️ **Warning**: Only use this in true emergencies. The hooks exist to maintain code quality.
+
+## 🤖 AI Coding Guidelines
+
+This project includes `.cursorrules` file with guidelines for AI-assisted development using Cursor or other AI coding assistants. The guidelines cover:
+
+- Code style and formatting preferences
+- Architecture patterns and best practices
+- Error handling and testing requirements
+- Security and performance considerations
+- Documentation standards
+
+When using AI coding assistants, they will automatically follow these guidelines to ensure consistent code quality across the project.
 
 ## 📝 Documentation
 

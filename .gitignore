@@ -123,3 +123,7 @@ temp/
 .tern-port
 .vscode-test/
 
+# Husky
+# Note: .husky/ directory should be tracked, but .husky/_/ contains internal files
+.husky/_
+

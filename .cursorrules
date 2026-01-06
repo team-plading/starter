@@ -1,0 +1,122 @@
+# Cursor AI Coding Guidelines
+
+## Code Style
+
+- Follow the project's ESLint and Prettier configurations
+- Use single quotes for strings (JavaScript/TypeScript)
+- Use 2 spaces for indentation
+- Always add semicolons
+- Use trailing commas in multi-line structures
+- Prefer const over let, avoid var
+- Use arrow functions for callbacks
+- Prefer template literals over string concatenation
+
+## Architecture Patterns
+
+- Keep functions small and focused (single responsibility)
+- Prefer composition over inheritance
+- Use meaningful variable and function names
+- Avoid deep nesting (max 3-4 levels)
+- Extract complex logic into separate functions
+- Use early returns to reduce nesting
+
+## Error Handling
+
+- Always handle errors explicitly
+- Use try-catch for async operations
+- Provide meaningful error messages
+- Log errors appropriately
+- Never swallow errors silently
+- Use custom error types when appropriate
+
+## Testing
+
+- Write tests for new features
+- Aim for high code coverage (>80%)
+- Test edge cases and error conditions
+- Use descriptive test names
+- Follow AAA pattern (Arrange, Act, Assert)
+- Keep tests isolated and independent
+
+## Documentation
+
+- Add JSDoc comments for public APIs
+- Document complex algorithms and business logic
+- Keep README files up to date
+- Document architectural decisions in ADRs
+- Include examples in documentation
+
+## Security
+
+- Never commit secrets or API keys
+- Validate and sanitize user input
+- Use parameterized queries for databases
+- Implement proper authentication and authorization
+- Follow OWASP security best practices
+- Keep dependencies up to date
+
+## Performance
+
+- Avoid premature optimization
+- Profile before optimizing
+- Use lazy loading when appropriate
+- Optimize database queries
+- Cache expensive operations
+- Minimize bundle size
+
+## Git Practices
+
+- Use conventional commit messages
+- Write clear, descriptive commit messages
+- Keep commits focused and atomic
+- Reference issues in commit messages when applicable
+- Never commit directly to main/develop branches
+
+## Code Review
+
+- Review your own code before requesting review
+- Keep PRs small and focused
+- Provide context in PR descriptions
+- Address review feedback promptly
+- Be respectful and constructive in reviews
+
+## Dependencies
+
+- Prefer well-maintained, popular packages
+- Keep dependencies up to date
+- Audit dependencies regularly
+- Minimize external dependencies
+- Document why specific dependencies are chosen
+
+## File Organization
+
+- Group related files together
+- Use consistent naming conventions
+- Keep files focused and single-purpose
+- Organize imports (external, internal, relative)
+- Remove unused imports and code
+
+## Accessibility
+
+- Use semantic HTML
+- Provide alt text for images
+- Ensure keyboard navigation works
+- Maintain proper color contrast
+- Test with screen readers when applicable
+
+## Browser Compatibility
+
+- Support modern browsers (last 2 versions)
+- Use feature detection, not browser detection
+- Provide fallbacks for unsupported features
+- Test across different browsers and devices
+
+## General Principles
+
+- Write code that is easy to read and understand
+- Prefer explicit over implicit
+- Follow the principle of least surprise
+- Keep it simple (KISS principle)
+- Don't repeat yourself (DRY)
+- You aren't gonna need it (YAGNI)
+

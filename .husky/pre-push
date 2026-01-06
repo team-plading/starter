@@ -1,0 +1,18 @@
+. "$(dirname "$0")/common.sh"
+
+echo "===\n>> Running pre-push checks..."
+
+# Run tests if test script exists
+if pnpm run | grep -q "test"; then
+  echo ">> Running tests..."
+  pnpm test
+fi
+
+# Run build validation if build script exists
+if pnpm run | grep -q "build"; then
+  echo ">> Running build validation..."
+  pnpm build
+fi
+
+echo ">> Pre-push checks completed"
+
