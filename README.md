@@ -62,35 +62,6 @@ project-root/
 └── README.md            # This file
 ```
 
-## 🛠️ Customization
-
-### Adding Your Tech Stack
-
-1. **Node.js/JavaScript/TypeScript**
-
-   - Add `package.json` and `package-lock.json` to `.gitignore` if not committing
-   - Create `package.json` with your dependencies
-   - Add build configuration files (webpack, vite, etc.)
-
-2. **Python**
-
-   - Add `requirements.txt` or `pyproject.toml`
-   - Add `__pycache__/`, `*.pyc`, `venv/` to `.gitignore`
-
-3. **Java/Kotlin**
-
-   - Add `build/`, `target/`, `.gradle/` to `.gitignore`
-   - Create `build.gradle` or `pom.xml`
-
-4. **Go**
-
-   - Add `go.mod` and `go.sum`
-   - Add `vendor/` to `.gitignore`
-
-5. **Rust**
-   - Add `Cargo.toml` and `Cargo.lock`
-   - Add `target/` to `.gitignore`
-
 ### Configuration Files
 
 - **`.editorconfig`**: Ensures consistent coding styles across different editors
